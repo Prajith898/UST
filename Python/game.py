@@ -18,8 +18,9 @@ for i in range(1,num+1):
             1) Snake
             2) Water
             3) Gun\n""".format(i))
-    choice1=random.choice(choice)
-    choice2=(input("Enter player choice :").lower())
+    choice2=random.choice(choice)
+    choice1=(input("Enter player choice :").lower())
+    print("computer choice : ",choice2)
     if ((choice1=='snake' and choice2=='water')or(choice1=='water'and choice2=='gun')or(choice1=='gun'and choice2=='snake')):
         print("***{} wins round {}***".format(player,i))
         count1+=1
@@ -31,8 +32,8 @@ for i in range(1,num+1):
         count3+=1
     else:
         print("\nWrong choice")
-print("{} wins {} times".format(player1,count2))
-print("Computer wins {} times".format(count1))
+print("{} wins {} times".format(player1,count1))
+print("Computer wins {} times".format(count2))
 print("Tie :",count3)
 
 
